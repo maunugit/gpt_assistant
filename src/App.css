@@ -3,17 +3,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Full height */
+  min-height: 100vh;
 }
 
 .messages {
-  width: 80%; /* Adjust as needed */
+  width: 80%; 
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc; /* For visibility, can be changed */
-  border-radius: 10px; /* Optional, for rounded corners */
-  max-height: 500px; /* Adjust as needed */
-  overflow-y: auto; /* For scroll on overflow */
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  max-height: 500px; 
+  overflow-y: auto;
 }
 
 .message {
@@ -25,12 +25,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Space between input and button */
+  gap: 10px; 
   margin-top: 20px;
 }
 
 input[type="text"] {
-  width: 300px; /* Adjust as needed */
+  width: 300px; 
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -43,7 +43,6 @@ button {
   cursor: pointer;
 }
 
-/* Styling for User and AI messages */
 .message.User {
   text-align: right;
 }
