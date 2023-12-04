@@ -1,0 +1,53 @@
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height */
+}
+
+.messages {
+  width: 80%; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc; /* For visibility, can be changed */
+  border-radius: 10px; /* Optional, for rounded corners */
+  max-height: 500px; /* Adjust as needed */
+  overflow-y: auto; /* For scroll on overflow */
+}
+
+.message {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 300px; /* Adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styling for User and AI messages */
+.message.User {
+  text-align: right;
+}
+
+.message.AI {
+  text-align: left;
+}
