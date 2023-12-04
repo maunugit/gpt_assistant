@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { sendMessage } from './apiService'; // Importing the API service
+import './App.css';
 
 function ChatApp() {
   const [messages, setMessages] = useState([]);
