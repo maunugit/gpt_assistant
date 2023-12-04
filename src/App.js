@@ -43,11 +43,11 @@ return (
   <div className="chat-app">
       <div className="messages">
           {messages.map((message, index) => (
-              <div key={index} className={`message ${message.author}`}>
-                  {message.author}: {message.text}
-              </div>
-          ))}
-      </div>
+        <div key={index} className={`message ${message.author}`}>
+            <div className="message-content">{message.text}</div>
+        </div>
+    ))}
+</div>
       <form onSubmit={handleSubmit}>
           <input
               type="text"
