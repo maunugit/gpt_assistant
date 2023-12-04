@@ -16,13 +16,27 @@
   max-height: 60vh;
   overflow-y: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .message {
   padding: 5px;
   margin-bottom: 10px;
+  width: 100%;
 }
+
+.message-content {
+  max-width: 60%; 
+  margin-left: auto; 
+  text-align: right;
+}
+
+.message.AI .message-content {
+  margin-right: auto; 
+  margin-left: 0;
+  text-align: left;
+}
+
 
 form {
   width: 100%;
@@ -43,14 +57,4 @@ button {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-}
-
-.message.User {
-  text-align: right;
-  align-self: flex-end;
-}
-
-.message.AI {
-  text-align: left;
-  align-self: flex-start;
 }
