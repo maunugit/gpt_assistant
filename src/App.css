@@ -4,16 +4,19 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 .messages {
-  width: 80%; 
-  margin: 0 auto;
+  width: 40%; 
+  margin-bottom: 20px;
   padding: 20px;
-  border: 1px solid #ccc; 
-  border-radius: 10px; 
-  max-height: 500px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-height: 60vh;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .message {
@@ -22,16 +25,15 @@
 }
 
 form {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; 
-  margin-top: 20px;
+  justify-content: center;
 }
 
 input[type="text"] {
-  width: 300px; 
+  width: 30%; 
   padding: 10px;
+  margin-right: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -45,8 +47,10 @@ button {
 
 .message.User {
   text-align: right;
+  align-self: flex-end;
 }
 
 .message.AI {
   text-align: left;
+  align-self: flex-start;
 }
