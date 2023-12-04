@@ -1,3 +1,7 @@
+# Personal AI assistant
+This project includes a React-based frontend side of a chat interface, where the user can conversate with an GPT-based artificial intelligence.
+The backend side of the project is a Flask API built with Python.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
