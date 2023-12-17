@@ -1,0 +1,54 @@
+/* This will center your chat app in the middle of the page */
+.ChatApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns vertically */
+    align-items: center; /* Aligns horizontally */
+    height: 100vh; /* Use the full height of the viewport */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+.ChatHeader {
+    font-size: 2em; /* Large text */
+    color: #800080; /* Purple color */
+    text-align: center;
+    margin-bottom: 20px; /* Spacing below the header */
+  }
+  
+  
+  /* Styling for the messages container */
+  .messages {
+    width: 100%; /* Or a fixed width like 500px if you prefer */
+    max-width: 800px; /* Maximum width */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align messages to the bottom */
+    overflow-y: auto;
+  }
+  
+  /* Style for user message bubbles */
+  .Message.user {
+    align-self: flex-end;
+    background-color: #1A8CFF; /* Choose a color for the user messages */
+    color: white; /* Text color */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px 0;
+    max-width: 70%;
+  }
+  
+  /* Style for AI message bubbles */
+  .Message.ai {
+    align-self: flex-start;
+    background-color: #E5E5EA; /* Different color for the AI messages */
+    color: black; /* Text color */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px 0;
+    max-width: 70%;
+  }
+
+  
+  
+  

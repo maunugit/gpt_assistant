@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { sendMessage } from './apiService'; // Importing the API service
-import './App.css';
+import Message from './Message'; // Assuming you have a Message component
+import InputBar from './InputBar'; // Assuming you have an InputBar component
+import './ChatApp.css'; // Make sure you create this CSS file and define styles
 
 function ChatApp() {
   const [messages, setMessages] = useState([]);
@@ -14,60 +16,44 @@ function ChatApp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!userInput.trim()) return;
-  
+
     const userMessage = {
       text: userInput,
-      author: 'User'
+      author: 'user'
     };
-  
+
     setMessages(messages => [...messages, userMessage]); // Add user message to chat
     setUserInput(''); // Clearing the input field
     setIsAiTyping(true);
-  
+
     try {
-      const response = await sendMessage(userInput); // Sending message to API
-      console.log('Response from server:', response); // Handling response
-  
-        const aiMessage = {
-          text: response.reply, // Get AI response
-          author: 'AI'
-      
+      const aiResponse = await sendMessage(userInput); // Sending message to API
+      const aiMessage = {
+        text: aiResponse.reply, // Get AI response
+        author: 'ai'
       };
-
       setMessages(messages => [...messages, aiMessage]); // Add AI response to chat
-      setIsAiTyping(false); // AI stops typing 
-
     } catch (error) {
       console.error('Error sending message:', error);
-      setIsAiTyping(false);
     }
-  
-    
+    setIsAiTyping(false); // AI stops typing after response or error
   };
-  
 
-return (
-  <div className="chat-app">
+  return (
+    <div className="ChatApp">
       <div className="messages">
-          {messages.map((message, index) => (
-            <div key={index} className={`message ${message.author}`}>
-            <div className="message-content">{message.text}</div>
-        </div>
-    ))}
-    {isAiTyping && <div className="ai-typing"> AI is typing...</div>}
-</div>
-      <form onSubmit={handleSubmit}>
-          <input
-              type="text"
-              value={userInput}
-              onChange={handleInputChange}
-              placeholder="Type your message here..."
-          />
-          <button type="submit">Send</button>
-      </form>
-  </div>
-);
+        {messages.map((message, index) => (
+          <Message key={index} text={message.text} author={message.author} />
+        ))}
+        {isAiTyping && <div className="ai-typing">AI is typing...</div>}
+      </div>
+      <InputBar 
+        userInput={userInput} 
+        onInputChange={handleInputChange} 
+        onSubmit={handleSubmit} 
+      />
+    </div>
+  );
 }
-
 
 export default ChatApp;
