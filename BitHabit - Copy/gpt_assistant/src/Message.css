@@ -1,0 +1,33 @@
+
+
+.message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin: 5px;
+    max-width: 80%;
+    word-wrap: break-word; 
+  }
+  
+  .message-user {
+    align-self: flex-end;
+    background-color: #b24bee; /* Blue for the user messages */
+    color: white;
+    margin-right: 10px; 
+  }
+  
+  .message-ai {
+    align-self: flex-start;
+    background-color: #E5E5EA; /* Light grey for the AI messages */
+    color: black; 
+    margin-left: 10px; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .message-user,
+    .message-ai {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  

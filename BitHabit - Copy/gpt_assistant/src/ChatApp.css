@@ -1,0 +1,54 @@
+/*  center The chat app in the middle of the page */
+.ChatApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+  }
+.ChatHeader {
+    font-size: 2em; 
+    color: #800080; 
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  
+  /* Styling for the messages container */
+  .messages {
+    width: 100%; 
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    overflow-y: auto;
+  }
+  
+  /* Style for user message bubbles */
+  .Message.user {
+    align-self: flex-end;
+    background-color: #1A8CFF; 
+    color: white; /* Text color */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px 0;
+    max-width: 70%;
+  }
+  
+  /* Style for AI message bubbles */
+  .Message.ai {
+    align-self: flex-start;
+    background-color: #E5E5EA; /* Different color for the AI messages */
+    color: black; /* Text color */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px 0;
+    max-width: 70%;
+  }
+
+  
+  
+  

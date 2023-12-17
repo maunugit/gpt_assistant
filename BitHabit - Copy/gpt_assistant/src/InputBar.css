@@ -1,0 +1,55 @@
+
+  /* InputBar.css */
+
+.inputBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f9f9f9; 
+    border: 1px solid #e1e1e1;
+    border-radius: 25px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px; 
+  }
+  
+  .inputBar input {
+    flex-grow: 1; 
+    border: none; 
+    outline: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 25px; 
+    margin-right: 10px; 
+  }
+  
+  .inputBar button {
+    padding: 10px 20px; 
+    border: none;
+    background-color: #007bff; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 25px; 
+    outline: none; 
+    transition: background-color 0.2s ease-in-out; 
+  }
+  
+  .inputBar button:hover,
+  .inputBar button:focus {
+    background-color: #b24bee; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .inputBar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .inputBar input,
+    .inputBar button {
+      width: 100%; 
+      margin: 5px 0; 
+    }
+  }
+  
