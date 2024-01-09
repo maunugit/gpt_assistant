@@ -4,6 +4,7 @@ import openai
 import logging
 import os
 
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -13,7 +14,9 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 if not OPENAI_API_KEY:
     raise RuntimeError("OPENAI_API_KEY is not set in the environment variables")
 
-openai.api_key = OPENAI_API_KEY
+
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
 
 @app.route('/message', methods=['POST'])
 def handle_message():
