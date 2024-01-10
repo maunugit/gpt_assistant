@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://bithabit-53cc8002fb69.herokuapp.com/' // Flask API URL
+    baseURL: 'http://127.0.0.1:5000' // Flask API URL
 });
 
 export const sendMessage = async (message) => {
