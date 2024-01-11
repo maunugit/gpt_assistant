@@ -6,6 +6,7 @@ import os
 
 
 app = Flask(__name__)
+# Should replace the "origins" with {"origins": "https://gpt-assistant-coral.vercel.app/"}, but later
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s:%(message)s')
@@ -42,7 +43,7 @@ def handle_message():
         )
         #Tailored responses :
         ai_responses = [
-            {"role": "assistant", "content": "Hello! I am BitHabit's virtual assistant How can I assist you today?"},
+            {"role": "assistant", "content": "Hello! I am BitHabit's virtual assistant. How can I assist you today?"},
             {"role": "assistant", "content": "I am here to provide guidance on fitness, nutrition, and overall well-being."},
             {"role": "assistant", "content": "Feel free to ask any questions or seek advice."},
             {"role": "assistant", "content": "BitHabit, created by WellPro, is committed to helping you lead a healthier lifestyle."},

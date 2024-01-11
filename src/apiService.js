@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:5000' // Flask API URL
+    baseURL: 'http://maunu.pythonanywhere.com/' // Flask API URL
 });
 
 export const sendMessage = async (message) => {
